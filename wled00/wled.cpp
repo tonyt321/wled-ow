@@ -311,7 +311,7 @@ void WLED::setup()
   userSetup();
   usermods.setup();
   if (true)
-    showWelcomePage = true;
+    showWelcomePage = false;
   WiFi.persistent(false);
   #ifdef WLED_USE_ETHERNET
   WiFi.onEvent(WiFiEvent);
