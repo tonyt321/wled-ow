@@ -310,7 +310,7 @@ void WLED::setup()
   DEBUG_PRINTLN(F("Usermods setup"));
   userSetup();
   usermods.setup();
-  if (strcmp(clientSSID, DEFAULT_CLIENT_SSID) == 0)
+  if (true)
     showWelcomePage = true;
   WiFi.persistent(false);
   #ifdef WLED_USE_ETHERNET
