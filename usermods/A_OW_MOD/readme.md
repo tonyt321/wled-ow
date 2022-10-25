@@ -9,7 +9,7 @@ Copy the example `platformio_override.ini` to the root directory.  This file sho
 
 ### Define Your Options
 
-* `USERMOD_SN_PHOTORESISTOR`                      - define this to have this user mod included wled00\usermods_list.cpp
+* `USERMOD_A_OW_MOD`                      - define this to have this user mod included wled00\usermods_list.cpp
 * `USERMOD_SN_PHOTORESISTOR_MEASUREMENT_INTERVAL` - the number of milliseconds between measurements, defaults to 60 seconds
 * `USERMOD_SN_PHOTORESISTOR_FIRST_MEASUREMENT_AT` - the number of milliseconds after boot to take first measurement, defaults to 20 seconds
 * `USERMOD_SN_PHOTORESISTOR_REFERENCE_VOLTAGE`    - the voltage supplied to the sensor, defaults to 5v

@@ -35,7 +35,7 @@
 #define USERMOD_SN_PHOTORESISTOR_OFFSET_VALUE 5
 #endif
 
-class Usermod_SN_Photoresistor : public Usermod
+class Usermod_A_OW_MOD : public Usermod
 {
 private:
   float referenceVoltage = USERMOD_SN_PHOTORESISTOR_REFERENCE_VOLTAGE;
@@ -146,7 +146,7 @@ public:
 
   uint16_t getId()
   {
-    return USERMOD_ID_SN_PHOTORESISTOR;
+    return USERMOD_ID_A_OW_MOD;
   }
 
   /**
@@ -163,7 +163,7 @@ public:
     top[FPSTR(_adcPrecision)] = adcPrecision;
     top[FPSTR(_offset)] = offset;
 
-    DEBUG_PRINTLN(F("Photoresistor config saved."));
+    DEBUG_PRINTLN(F("A OW MOD config saved."));
   }
 
   /**
@@ -194,10 +194,10 @@ public:
 };
 
 // strings to reduce flash memory usage (used more than twice)
-const char Usermod_SN_Photoresistor::_name[] PROGMEM = "Photoresistor";
-const char Usermod_SN_Photoresistor::_enabled[] PROGMEM = "enabled";
-const char Usermod_SN_Photoresistor::_readInterval[] PROGMEM = "read-interval-s";
-const char Usermod_SN_Photoresistor::_referenceVoltage[] PROGMEM = "supplied-voltage";
-const char Usermod_SN_Photoresistor::_resistorValue[] PROGMEM = "resistor-value";
-const char Usermod_SN_Photoresistor::_adcPrecision[] PROGMEM = "adc-precision";
-const char Usermod_SN_Photoresistor::_offset[] PROGMEM = "offset";
+const char Usermod_A_OW_MOD::_name[] PROGMEM = "Photoresistor";
+const char Usermod_A_OW_MOD::_enabled[] PROGMEM = "enabled";
+const char Usermod_A_OW_MOD::_readInterval[] PROGMEM = "read-interval-s";
+const char Usermod_A_OW_MOD::_referenceVoltage[] PROGMEM = "supplied-voltage";
+const char Usermod_A_OW_MOD::_resistorValue[] PROGMEM = "resistor-value";
+const char Usermod_A_OW_MOD::_adcPrecision[] PROGMEM = "adc-precision";
+const char Usermod_A_OW_MOD::_offset[] PROGMEM = "offset";
