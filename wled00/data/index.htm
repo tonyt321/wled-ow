@@ -6,27 +6,28 @@
 	<meta name="theme-color" content="#222222">
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAGACGAAAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAE1JREFUOI1j/P//PwOxgNGeAUMxE9G6cQCKDWAhpADZ2f8PMjBS3QW08QK20KaZC2gfC9hCnqouoNgARgY7zMxAyNlUdQHlXiAlO2MDAD63EVqNHAe0AAAAAElFTkSuQmCC"/>
-	<title>WLED</title>
+	<title>RGB Thing</title>
 	<script>function feedback(){}</script>
 	<link rel="stylesheet" href="index.css">
 </head>
 <body onload="onLoad()">
 
-<div id="cv" class="overlay">Loading WLED UI...</div>
-<noscript><div class="overlay" style="opacity:1;">Sorry, WLED UI needs JavaScript!</div></noscript>
+<div id="cv" class="overlay">Loading RGB Thing UI...</div>
+<noscript><div class="overlay" style="opacity:1;">Sorry, RGB Thing UI needs JavaScript!</div></noscript>
 <div id="bg"></div>
 
 <div class="wrapper" id="top">
 	<div class="tab top">
 		<div class="btnwrap">
-			<button id="buttonPower" onclick="togglePower()" class="tgl"><i class="icons">&#xe08f;</i><p class="tab-label">Power</p></button>
-			<button id="buttonNl" onclick="toggleNl()"><i class="icons">&#xe2a2;</i><p class="tab-label">Timer</p></button>
-			<button id="buttonSync" onclick="toggleSync()"><i class="icons">&#xe116;</i><p class="tab-label">Sync</p></button>
+			<button style="display:none;" id="buttonPower" onclick="togglePower()" class="tgl"><i class="icons">&#xe08f;</i><p class="tab-label">Power</p></button>
+			<button style="display:none;" id="buttonNl" onclick="toggleNl()"><i class="icons">&#xe2a2;</i><p class="tab-label">Timer</p></button>
+			<button style="display:none;" id="buttonSync" onclick="toggleSync()"><i class="icons">&#xe116;</i><p class="tab-label">Sync</p></button>
 			<button id="buttonSr" onclick="toggleLiveview()"><i class="icons">&#xe410;</i><p class="tab-label">Peek</p></button>
 		  <button id="buttonI" onclick="toggleInfo()"><i class="icons">&#xe066;</i><p class="tab-label">Info</p></button>
       <button id="buttonNodes" onclick="toggleNodes()"><i class="icons">&#xe22d;</i><p class="tab-label">Nodes</p></button></div>
-			<button onclick="window.location.href = '/settings';"><i class="icons">&#xe0a2;</i><p class="tab-label">Config</p></button>
-		  <button id="buttonPcm" onclick="togglePcMode(true)"><i class="icons">&#xe23d;</i><p class="tab-label">PC Mode</p></button>
+			<button onclick="window.location.href = '/settings/wifi';"><i class="icons">&#xe0a2;</i><p class="tab-label">Wifi</p></button>
+			<button onclick="window.location.href = '/settings/um';"><i class="icons">&#xe22d;</i><p class="tab-label">Config</p></button>
+		  <button id="buttonPcm" onclick="togglePcMode(true)"><i class="icons">&#xe23d;</i><p class="tab-label">Tablet Mode</p></button>
 		</div>
 		<div id="briwrap">
 			<p class="hd">Brightness</p>
@@ -187,8 +188,8 @@
 <button class="btn infobtn" onclick="requestJson(null)">Refresh</button>
 <button class="btn infobtn" onclick="toggleInfo()">Close Info</button><br>
 <button class="btn infobtn" onclick="toggleNodes()">Instance List</button>
-<button class="btn infobtn" id="resetbtn" onclick="cnfReset()">Reboot WLED</button><br>
-<span class="h">Made with <span id="heart">&#10084;&#xFE0E;</span> by Aircoookie and the WLED community</span>
+<button class="btn infobtn" id="resetbtn" onclick="cnfReset()">Reboot RGB Thing</button><br>
+<span class="h">Made with <span id="heart">&#10084;&#xFE0E;</span>
 </div>
 
 <div id="nodes" class="modal">
