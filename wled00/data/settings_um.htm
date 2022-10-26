@@ -15,7 +15,7 @@
     function gId(s) { return d.getElementById(s); }
     function isO(i) { return (i && typeof i === 'object' && !Array.isArray(i)); }
     function H() { window.open("https://github.com/Aircoookie/WLED/wiki/Settings#usermod-settings"); }
-    function B() { window.open("/settings","_self"); }
+    function B() { window.open("/","_self"); }
     function S() {
         if (window.location.protocol == "file:") {
             loc = true;
@@ -141,12 +141,12 @@
 <body onload="S()">
 	<form id="form_s" name="Sf" method="post" onsubmit="svS(event)">
 		<div class="toprow">
-		<div class="helpB"><button type="button" onclick="H()">?</button></div>
+		<div style="display:none;" class="helpB"><button type="button" onclick="H()">?</button></div>
 		<button type="button" onclick="B()">Back</button><button type="submit">Save</button><br>
 		<span id="lssuc" style="color:green; display:none">&#10004; Configuration saved!</span>
 		<span id="lserr" style="color:red; display:none">&#9888; Could not load configuration.</span><hr>
 		</div>
-		<h2>Custom Settings</h2>
+		<h2>Usermod Setup</h2>
         <div id="um">Loading settings...</div>
 		<hr><button type="button" onclick="B()">Back</button><button type="submit">Save</button>
 	</form>
